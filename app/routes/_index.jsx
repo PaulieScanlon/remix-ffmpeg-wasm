@@ -12,7 +12,7 @@ export default function Index() {
     await ffmpeg.load({
       coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, 'text/javascript'),
       wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, 'application/wasm'),
-      classWorkerURL: await toBlobURL('/', 'text/javascript'),
+      classWorkerURL: '../../@ffmpeg/ffmpeg/dist/esm/worker.js',
     });
 
     setLoaded(true);
