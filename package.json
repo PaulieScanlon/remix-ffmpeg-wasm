@@ -9,7 +9,8 @@
     "start": "netlify serve",
     "typecheck": "tsc -b",
     "redirects:enable": "shx cp .redirects public/_redirects",
-    "redirects:disable": "shx rm -f public/_redirects"
+    "redirects:disable": "shx rm -f public/_redirects",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@ffmpeg/ffmpeg": "^0.12.10",
